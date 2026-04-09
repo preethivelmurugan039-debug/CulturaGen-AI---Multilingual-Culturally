@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Outfit', sans-serif;
+  --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  --text-main: #333333;
+  --text-muted: #666666;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --primary-color: #6366f1;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Country Themes */
+body.theme-India {
+  --bg-gradient: linear-gradient(135deg, #fff3e0 0%, #ffcc80 50%, #ffab40 100%);
+  --text-main: #4a1c12;
+  --primary-color: #e65100;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(230, 81, 0, 0.15);
+}
+
+body.theme-USA {
+  --bg-gradient: linear-gradient(135deg, #f0fbff 0%, #bbdefb 50%, #42a5f5 100%);
+  --text-main: #0d47a1;
+  --primary-color: #1976d2;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(13, 71, 161, 0.1);
+}
+
+body.theme-Japan {
+  --bg-gradient: linear-gradient(135deg, #fff5f8 0%, #fce4ec 50%, #f48fb1 100%);
+  --text-main: #4a0024;
+  --primary-color: #d81b60;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(216, 27, 96, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background 0.6s ease-in-out, color 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
